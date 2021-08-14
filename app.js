@@ -13,7 +13,7 @@ app.listen(port, () => {
   console.log(`This app is listening at http://localhost:${port}`);
 });
 
-app.get("/", async (req, res) => {
+app.get("/app", async (req, res) => {
   const { url } = req.body
   const split = url.split("/")
   const screen_name = `screen_name=${split.length - 1}`
