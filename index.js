@@ -1,11 +1,13 @@
 // Import Dependencies
 const express = require("express");
 const fetch = require("node-fetch");
+const cors = require('cors');
 require("dotenv").config();
 const app = express();
 
-const port = 3000;
+const port = 3001;
 
+app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -13,8 +15,9 @@ app.listen(port, () => {
   console.log(`This app is listening at http://localhost:${port}`);
 });
 
-app.get("/app", async (req, res) => {
+app.post("/app", async (req, res) => {
   const { url } = req.body
+  console.log(url);
   const split = url.split("/")
   const screen_name = `screen_name=${split.length - 1}`
 

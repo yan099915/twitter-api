@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "start"
+    "test": "echo \"error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "react": "cd my-app && npm start",
+    "start": "concurrently \"npm run dev\" \"npm run react\""
   },
   "repository": {
     "type": "module",
@@ -17,12 +20,11 @@
   },
   "homepage": "https://github.com/yan099915/twitter-api#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "concurrently": "^6.2.1",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
-    "nodemon": "^2.0.12",
-    "twitter": "^1.7.1",
-    "twitter-v2": "^1.1.0"
+    "nodemon": "^2.0.12"
   }
 }
