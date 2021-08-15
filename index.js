@@ -16,13 +16,13 @@ app.listen(port, () => {
 });
 
 app.post("/app", async (req, res) => {
-  const { url } = req.body
-  console.log(url);
-  const split = url.split("/")
-  const screen_name = `screen_name=${split.length - 1}`
-
+  let { url, count } = req.body
+  let split = url.split("/")
+  let screen_name = `screen_name=${split[split.length - 1]}`
+  let qty = `count=${count}`
+  
   const response = await fetch(
-    `https://api.twitter.com/1.1/statuses/user_timeline.json?${screen_name}&count=2&trim_user=true&exclude_replies=false&include_rts=false`,
+    `https://api.twitter.com/1.1/statuses/user_timeline.json?${screen_name}&${qty}&trim_user=true&exclude_replies=false&include_rts=false`,
     {
       method: "GET",
       headers: {
