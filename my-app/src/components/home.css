@@ -1,0 +1,55 @@
+.container {
+    height: 1200px;
+    display: block;
+    background-color: #002b36;
+}
+.count {
+    font-size: 16px;
+
+    height: 35px;
+    text-align: center;
+    font-weight: 600;
+    padding: 4px 15px;
+    margin: 5px;
+    text-decoration: none;
+}
+.header {
+    background-color: #161b22;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.header > img {
+    width: 70px;
+    position: absolute;
+    left: 30px;
+    
+}
+
+.search {
+    box-sizing: border-box;
+    /* width: 100%; */
+    width: 350px;
+    height: 34px;
+    margin: 6px 5px;
+    background-color: #fff;
+    border: 1px solid #CFD7E6;
+    border-radius: 4px;
+}
+
+.submit {
+    font-size: 16px;
+    line-height: 16px;
+    height: 35px;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+}
